@@ -1,18 +1,18 @@
 <template>
-  <div :class="{'dark': dark_mode}">
+  <div :class="{ dark: dark_mode }">
     <header
       x-data="
         {
           navbarOpen: false,
         }
       "
-      class="absolute left-0 top-0 z-50 w-full dark:bg-slate-800 dark:text-white"
+      class="absolute left-0 top-0 z-50 w-full dark:bg-slate-900 dark:text-white"
     >
-      <div class="container mx-auto ">
+      <div class="container mx-auto">
         <div class="relative -mx-4 flex items-center justify-between">
           <div class="w-60 max-w-full px-4">
             <a href="javascript:void(0)" class="block w-full py-5">
-              <img src="../assets/images/logo.png" alt="logo" class="w-full" />
+              <img src="../assets/images/Logoo.png" alt="logo" class="w-full" />
             </a>
           </div>
           <div class="flex w-full items-center justify-between px-4">
@@ -37,48 +37,43 @@
                 x-transition
                 :class="!navbarOpen && 'hidden'"
                 id="navbarCollapse"
-                class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none dark:bg-slate-800"
+                class="absolute right-4 top-full w-full max-w-[250px] rounded-lg py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none dark:bg-slate-900"
               >
                 <ul class="block lg:flex">
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex"
+                    <NuxtLink
+                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex dark:hover:text-cyan-400"
+                      to="/"
+                      >Home</NuxtLink
                     >
-                      Home
-                    </a>
                   </li>
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex"
+                    <NuxtLink
+                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex dark:hover:text-cyan-400"
+                      to="/about"
+                      >About me</NuxtLink
                     >
-                      About me
-                    </a>
                   </li>
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex"
+                    <NuxtLink
+                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex dark:hover:text-cyan-400"
+                      to="/projects"
+                      >Projects</NuxtLink
                     >
-                      My projects
-                    </a>
                   </li>
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex"
+                    <NuxtLink
+                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex dark:hover:text-cyan-400"
+                      to="/blogs"
+                      >Blogs</NuxtLink
                     >
-                      Blogs
-                    </a>
                   </li>
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex"
+                    <NuxtLink
+                      class="text-dark hover:text-primary flex py-2 text-base font-medium lg:ml-12 lg:inline-flex dark:hover:text-cyan-400"
+                      to="/contact"
+                      >Contact</NuxtLink
                     >
-                      Contact
-                    </a>
                   </li>
                 </ul>
               </nav>
@@ -103,14 +98,16 @@
       </div>
     </header>
     <!-- ====== Navbar Section End -->
-
-    <slot></slot>
+    <div class="mt-10">
+      <slot></slot>
+    </div>
+   
     <Footer />
   </div>
 </template>
 
 <script setup>
-const dark_mode = ref(false);
+const dark_mode = ref(true);
 
 const changeMode = () => {
   console.log(dark_mode.value);

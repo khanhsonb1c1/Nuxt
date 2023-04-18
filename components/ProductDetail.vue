@@ -1,7 +1,7 @@
 <template>
     <div class="w-full px-4 md:w-1/2 xl:w-1/3 card">
       <div class="mb-10 overflow-hidden rounded-lg bg-white">
-        <img :src="product.image" alt="image" class="w-full" />
+        <img :src="product.image_url" alt="image" class="w-full" />
         <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
           <h3>
             <a

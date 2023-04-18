@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="" style="height: 100vh;">
     projects 
   </div>
 </template>
 
 <script setup>
-definePageMeta({
-    layout:'dashboards'
-})
+// definePageMeta({
+//     layout:'dashboards'
+// })
 
 </script>
 

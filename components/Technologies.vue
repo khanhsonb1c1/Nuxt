@@ -21,15 +21,15 @@
       </div>
       <div class="-mx-4 flex flex-wrap">
         <div
-          class="w-full px-4 md:w-1/2 lg:w-1/3"
+          class="w-full px-4 md:w-1/3 lg:w-1/5 sm:w-1/2 "
           v-for="(item, index) in list"
           :key="index"
         >
           <div
-            class="mb-8 rounded-[20px] bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10 dark:bg-slate-700 dark:text-white"
+            class="mb-8 rounded-[20px] bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10 dark:bg-slate-700 dark:text-white text-center dark:hover:bg-cyan-700 dark:hover:shadow-cyan-300/50"
           >
             <div
-              class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
+              class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl mx-auto"
             >
               <img :src="item.image" alt="" class="" />
             </div>
@@ -57,7 +57,7 @@ import logo_js from "../assets/images/JavaScript-logo.png";
 import logo_express from "../assets/images/express-logo.png";
 import logo_scss from "../assets/images/sass.png";
 import logo_tailwind from "../assets/images/Tailwind_CSS_Logo.svg.png";
-import logo_mongo from "../assets/images/mongo.jpeg";
+import logo_mongo from "../assets/images/mongobg.png";
 
 const list = ref([
   {
